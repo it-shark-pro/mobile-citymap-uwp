@@ -8,6 +8,11 @@
     mc:Ignorable="d">
 
     <Grid>
-
+        <TextBlock Text="Hello, IT-Shark!"
+                   Foreground="#2C404B"
+                   FontSize="32"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
     </Grid>
 </Page>

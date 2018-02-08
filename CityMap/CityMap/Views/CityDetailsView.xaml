@@ -21,5 +21,10 @@
                        Margin="12,0,0,0"
                        VerticalAlignment="Center"/>
         </Grid>
+
+        <TextBlock Grid.Row="1"
+                   x:Name="DescriptionTextBlock"
+                   Margin="12,12,0,0"
+                   Foreground="#2C404B"/>
     </Grid>
 </Page>

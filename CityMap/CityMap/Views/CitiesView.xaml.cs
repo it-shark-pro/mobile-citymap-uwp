@@ -20,7 +20,7 @@ namespace CityMap.Views
 
 		private void CitiesListView_ItemClick(object sender, ItemClickEventArgs e)
 		{
-			Frame.Navigate(typeof(CityDetailsView));
+			Frame.Navigate(typeof(CityDetailsView), e.ClickedItem);
 		}
 	}
 }

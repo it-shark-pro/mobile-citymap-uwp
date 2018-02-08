@@ -1,4 +1,6 @@
 ﻿using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
+using CityMap.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -12,6 +14,19 @@ namespace CityMap.Views
 		public CityDetailsView()
 		{
 			this.InitializeComponent();
+		}
+
+		protected override void OnNavigatedTo(NavigationEventArgs e)
+		{
+			var city = e.Parameter as City;
+
+			if (city != null)
+			{
+				NameTextBlock.Text = city.Name;
+				DescriptionTextBlock.Text = city.Description;
+			}
+
+			base.OnNavigatedTo(e);
 		}
 	}
 }

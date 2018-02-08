@@ -1,9 +1,11 @@
 ﻿using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.ViewManagement;
 using CityMap.Views;
 
 namespace CityMap
@@ -61,6 +63,8 @@ namespace CityMap
 				}
 				// Ensure the current window is active
 				Window.Current.Activate();
+
+				CustomizeTitleBar();
 			}
 		}
 
@@ -86,6 +90,22 @@ namespace CityMap
 			var deferral = e.SuspendingOperation.GetDeferral();
 			//TODO: Save application state and stop any background activity
 			deferral.Complete();
+		}
+
+		/// <summary>
+		/// Customize application title bar. Set white color for text and IT-Shark branded color for background
+		/// </summary>
+		private void CustomizeTitleBar()
+		{
+			var titleBar = ApplicationView.GetForCurrentView().TitleBar;
+
+			if (titleBar != null)
+			{
+				titleBar.ButtonBackgroundColor = Color.FromArgb(255, 44, 64, 75);
+				titleBar.ButtonForegroundColor = Colors.White;
+				titleBar.BackgroundColor = Color.FromArgb(255, 44, 64, 75);
+				titleBar.ForegroundColor = Colors.White;
+			}
 		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using Windows.UI.Xaml.Controls;
+using CityMap.Services;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -12,6 +13,9 @@ namespace CityMap.Views
 		public CitiesView()
 		{
 			this.InitializeComponent();
+
+			var citiesService = new CitiesService();
+			CitiesListView.ItemsSource = citiesService.Cities;
 		}
 	}
 }

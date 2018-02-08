@@ -17,5 +17,10 @@ namespace CityMap.Views
 			var citiesService = new CitiesService();
 			CitiesListView.ItemsSource = citiesService.Cities;
 		}
+
+		private void CitiesListView_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			Frame.Navigate(typeof(CityDetailsView));
+		}
 	}
 }

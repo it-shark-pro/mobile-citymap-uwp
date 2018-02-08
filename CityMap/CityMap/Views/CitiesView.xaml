@@ -23,7 +23,9 @@
         </Grid>
 
         <ListView Grid.Row="1"
-                  x:Name="CitiesListView">
+                  x:Name="CitiesListView"
+                  IsItemClickEnabled="True"
+                  ItemClick="CitiesListView_ItemClick">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

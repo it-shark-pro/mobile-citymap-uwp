@@ -1,4 +1,6 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using System.Threading.Tasks;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using CityMap.Services;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -10,15 +12,30 @@ namespace CityMap.Views
 	/// </summary>
 	public sealed partial class CitiesView : Page
 	{
+		private CitiesService _citiesService;
+
 		public CitiesView()
 		{
 			this.InitializeComponent();
 
-			var citiesService = new CitiesService();
-			CitiesListView.ItemsSource = citiesService.Cities;
+			_citiesService = new CitiesService();
 		}
 
-		private void CitiesListView_ItemClick(object sender, ItemClickEventArgs e)
+		private async void Page_Loaded(object sender, RoutedEventArgs e)
+		{
+			await InitializeAsync();
+		}
+
+		private async Task InitializeAsync()
+		{
+			LoadingProgressRing.IsActive = true;
+
+			CitiesGridView.ItemsSource = await _citiesService.LoadCitiesAsync();
+
+			LoadingProgressRing.IsActive = false;
+		}
+
+		private void CitiesGridView_ItemClick(object sender, ItemClickEventArgs e)
 		{
 			Frame.Navigate(typeof(CityDetailsView), e.ClickedItem);
 		}

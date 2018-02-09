@@ -5,7 +5,8 @@
     xmlns:local="using:CityMap.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
 
     <Grid Background="White">
         <Grid.RowDefinitions>
@@ -22,20 +23,37 @@
                        VerticalAlignment="Center"/>
         </Grid>
 
-        <ListView Grid.Row="1"
-                  x:Name="CitiesListView"
+        <GridView Grid.Row="1"
+                  x:Name="CitiesGridView"
+                  Margin="4,12,4,12"
                   IsItemClickEnabled="True"
-                  ItemClick="CitiesListView_ItemClick">
-            <ListView.ItemTemplate>
+                  HorizontalAlignment="Center"
+                  ItemClick="CitiesGridView_ItemClick">
+            <GridView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Name}"
-                                   Foreground="Black"/>
-                        <TextBlock Text="{Binding Description}"
-                                   Foreground="Gray"/>
-                    </StackPanel>
+                    <Grid Height="320"
+                          Width="240">
+                        <Image Source="{Binding ImageUrl}"
+                               Stretch="UniformToFill"/>
+                        <StackPanel Height="40"
+                                    VerticalAlignment="Bottom"
+                                    Background="{ThemeResource SystemBaseLowColor}"
+                                    Padding="12">
+                            <TextBlock Text="{Binding Name}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Foreground="White"/>
+                        </StackPanel>
+                    </Grid>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <ProgressRing Grid.Row="1"
+                      x:Name="LoadingProgressRing"
+                      IsActive="True"
+                      Width="68"
+                      Height="68"
+                      Foreground="#2C404B"/>
     </Grid>
 </Page>

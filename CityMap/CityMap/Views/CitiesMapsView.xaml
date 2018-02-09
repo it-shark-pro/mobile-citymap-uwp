@@ -5,6 +5,7 @@
     xmlns:local="using:CityMap.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d">
 
     <Grid Background="White">
@@ -21,5 +22,9 @@
                        Margin="12,0,0,0"
                        VerticalAlignment="Center"/>
         </Grid>
+
+        <maps:MapControl Grid.Row="1"
+                         x:Name="CitiesMapControl"
+                         ZoomLevel="1"/>
     </Grid>
 </Page>

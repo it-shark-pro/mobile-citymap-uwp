@@ -66,5 +66,10 @@ namespace CityMap.Views
 		{
 			Frame.Navigate(typeof(CityDetailsView), e.ClickedItem);
 		}
+
+		private void CitiesMapButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(CitiesMapsView));
+		}
 	}
 }

@@ -22,9 +22,24 @@
                        VerticalAlignment="Center"/>
         </Grid>
 
-        <TextBlock Grid.Row="1"
-                   x:Name="DescriptionTextBlock"
-                   Margin="12,12,0,0"
-                   Foreground="#2C404B"/>
+        <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto">
+            <Grid HorizontalAlignment="Center"
+                  MaxWidth="640">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="CityImage"
+                       Stretch="Uniform"
+                       Margin="0,1,0,1"/>
+
+                <TextBlock Grid.Row="1"
+                           x:Name="DescriptionTextBlock"
+                           Foreground="#2C404B"
+                           Margin="12"
+                           TextWrapping="WrapWholeWords"/>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>

@@ -69,7 +69,7 @@ namespace CityMap.Views
 
 		private void CitiesMapButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
 		{
-			Frame.Navigate(typeof(CitiesMapsView));
+			Frame.Navigate(typeof(CitiesMapsView), CitiesGridView.ItemsSource);
 		}
 	}
 }

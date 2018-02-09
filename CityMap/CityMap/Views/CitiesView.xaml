@@ -49,6 +49,13 @@
             </GridView.ItemTemplate>
         </GridView>
 
+        <TextBlock Grid.Row="1"
+                   x:Name="NoDataTextBlock"
+                   Foreground="#2C404B"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Visibility="Collapsed"/>
+
         <ProgressRing Grid.Row="1"
                       x:Name="LoadingProgressRing"
                       IsActive="True"

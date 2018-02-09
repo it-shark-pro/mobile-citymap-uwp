@@ -12,13 +12,18 @@ namespace CityMap.Views
 	/// </summary>
 	public sealed partial class CitiesView : Page
 	{
+		private const string NoConnectionLabel = "No internet connection!";
+		private const string NoDataLabel = "No data!";
+
 		private CitiesService _citiesService;
+		private NetworkService _networkService;
 
 		public CitiesView()
 		{
 			this.InitializeComponent();
 
 			_citiesService = new CitiesService();
+			_networkService = new NetworkService();
 		}
 
 		private async void Page_Loaded(object sender, RoutedEventArgs e)
@@ -34,9 +39,27 @@ namespace CityMap.Views
 		{
 			LoadingProgressRing.IsActive = true;
 
-			CitiesGridView.ItemsSource = await _citiesService.LoadCitiesAsync();
+			var cities = await _citiesService.LoadCitiesAsync();
 
 			LoadingProgressRing.IsActive = false;
+
+			if (cities == null)
+			{
+				ShowNoDataTextBlock();
+			}
+			else
+			{
+				CitiesGridView.ItemsSource = cities;
+			}
+		}
+
+		/// <summary>
+		/// Change data availability text block and set visibility to visible
+		/// </summary>
+		private void ShowNoDataTextBlock()
+		{
+			NoDataTextBlock.Text = _networkService.HasInternet() ? NoDataLabel : NoConnectionLabel;
+			NoDataTextBlock.Visibility = Visibility.Visible;
 		}
 
 		private void CitiesGridView_ItemClick(object sender, ItemClickEventArgs e)

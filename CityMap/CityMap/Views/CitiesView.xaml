@@ -26,6 +26,7 @@
                     Margin="0,0,12,0"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
+                    Visibility="Collapsed"
                     Tapped="CitiesMapButton_Tapped">
                 <Button.Content>
                     <StackPanel Orientation="Horizontal"

@@ -50,6 +50,7 @@ namespace CityMap.Views
 			else
 			{
 				CitiesGridView.ItemsSource = cities;
+				CitiesMapButton.Visibility = Visibility.Visible;
 			}
 		}
 

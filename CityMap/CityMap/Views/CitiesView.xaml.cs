@@ -26,6 +26,10 @@ namespace CityMap.Views
 			await InitializeAsync();
 		}
 
+		/// <summary>
+		/// Initialize view
+		/// </summary>
+		/// <returns></returns>
 		private async Task InitializeAsync()
 		{
 			LoadingProgressRing.IsActive = true;

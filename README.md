@@ -45,6 +45,8 @@
 
 <p align="center"><img src="Pictures/part0_screen1.png" width="800"></p>
 
+<p align="center"><img src="Pictures/part0_screen2.png" width="800"></p>
+
 ### Часть 1
 
 Данное задание требует создать список элементов (не более 10) с открытием экрана с детальным описанием после нажатия на конкретным элемент списка.

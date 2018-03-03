@@ -38,12 +38,12 @@
 В рамках данного задания требуется создать новый проект с одним экраном.
 При необходимости добавить к нему Splash screen, иконки и задать цветовую схему приложения.
 
+**Полезные материалы:**
+- [Создание первого приложения "Hello, world" (XAML)](https://docs.microsoft.com/ru-ru/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
+
 Результат, который должен получиться: [GitHub](https://github.com/it-shark-pro/mobile-citymap-uwp/tree/part0) | [Zip](https://github.com/it-shark-pro/mobile-citymap-uwp/archive/part0.zip)
 
-**Полезные материалы:**
-
-- [Пример результата 1](https://1drv.ms/i/s!AgTtAMl_sa4Dh1BRs_4zDmNgw3WB)
-- [Создание первого приложения "Hello, world" (XAML)](https://docs.microsoft.com/ru-ru/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
+<p align="center"><img src="Pictures/part0_screen1.png" width="800"></p>
 
 ### Часть 1
 
@@ -51,13 +51,14 @@
 Каждый элемент списка это объект класса (структуры) с некоторым набором атрибутов и методов. Объекты класса как и сам список создаются программно в рамках приложения.
 Объект класса (структуры) должен содержать такие поля как `Name` и `Description`.
 
+**Полезные материалы:**
+- [Работа с list view](https://docs.microsoft.com/ru-ru/windows/uwp/design/controls-and-patterns/listview-and-gridview)
+
 Результат, который должен получиться: [GitHub](https://github.com/it-shark-pro/mobile-citymap-uwp/tree/part1) | [Zip](https://github.com/it-shark-pro/mobile-citymap-uwp/archive/part1.zip)
 
-**Полезные материалы:**
-- [Пример результата 1](https://1drv.ms/i/s!AgTtAMl_sa4Dh1F6QJ6f3H3jgt8w)
-- [Пример результата 2](https://1drv.ms/i/s!AgTtAMl_sa4Dh1IGTOzFUf25n625)
+<p align="center"><img src="Pictures/part1_screen1.png" width="800"></p>
 
-- [Работа с list view](https://docs.microsoft.com/ru-ru/windows/uwp/design/controls-and-patterns/listview-and-gridview)
+<p align="center"><img src="Pictures/part1_screen2.png" width="800"></p>
 
 ### Часть 2
 
@@ -67,18 +68,20 @@
 
 Ресурс для получения данных: https://api.myjson.com/bins/7ybe5
 
-Результат, который должен получиться: [GitHub](https://github.com/it-shark-pro/mobile-citymap-uwp/tree/part2) | [Zip](https://github.com/it-shark-pro/mobile-citymap-uwp/archive/part2.zip)
-
 **Полезные материалы:**
-- [Пример результата 1](https://1drv.ms/i/s!AgTtAMl_sa4Dh1VU-b8hFgirt4aw)
-- [Пример результата 2](https://1drv.ms/i/s!AgTtAMl_sa4Dh1Rj8vy6qhSoCTGp)
-- [Пример результата 2](https://1drv.ms/i/s!AgTtAMl_sa4Dh1MihQaOGarN8oA4)
-
 - [Диспетчер пакетов NuGet](https://docs.microsoft.com/ru-ru/nuget/tools/package-manager-ui)
 - [Асинхронное программирование с использованием ключевых слов Async и Await](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/concepts/async/index)
 - [Отправка и получение данных по протоколам HTTP2.0 и HTTP1.1](https://docs.microsoft.com/ru-ru/windows/uwp/networking/httpclient)
 - [Работа с grid view](https://docs.microsoft.com/ru-ru/windows/uwp/design/controls-and-patterns/listview-and-gridview)
 - [Работа с картинками](https://docs.microsoft.com/ru-ru/uwp/api/windows.ui.xaml.controls.image)
+
+Результат, который должен получиться: [GitHub](https://github.com/it-shark-pro/mobile-citymap-uwp/tree/part2) | [Zip](https://github.com/it-shark-pro/mobile-citymap-uwp/archive/part2.zip)
+
+<p align="center"><img src="Pictures/part2_screen1.png" width="800"></p>
+
+<p align="center"><img src="Pictures/part2_screen2.png" width="800"></p>
+
+<p align="center"><img src="Pictures/part2_screen3.png" width="800"></p>
 
 ### Часть 3
 
@@ -93,13 +96,14 @@
 
 В рамках данного задания требуется добавить отдельную страницу с картой, на которой будут отображены метки городов полученных из JSON координат.
 
+**Полезные материалы:**
+- [Добавление карты в UWP приложение](http://www.c-sharpcorner.com/article/add-map-to-your-uwp-app/)
+
 Результат, который должен получиться: [GitHub](https://github.com/it-shark-pro/mobile-citymap-uwp/tree/part4) | [Zip](https://github.com/it-shark-pro/mobile-citymap-uwp/archive/part4.zip)
 
-**Полезные материалы:**
-- [Пример результата 1](https://1drv.ms/i/s!AgTtAMl_sa4Dh1cH_TAm4w-4ECO_)
-- [Пример результата 2](https://1drv.ms/i/s!AgTtAMl_sa4Dh1YJa0xjbGXnmThu)
+<p align="center"><img src="Pictures/part4_screen1.png" width="800"></p>
 
-- [Добавление карты в UWP приложение](http://www.c-sharpcorner.com/article/add-map-to-your-uwp-app/)
+<p align="center"><img src="Pictures/part4_screen2.png" width="800"></p>
 
 ### Результат
 
